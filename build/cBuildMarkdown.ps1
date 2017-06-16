@@ -32,34 +32,8 @@ function Get-ModuleFunctions {
         $ModuleName
     )
         
-    #$PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
-    #$Functions = $PublicFunctions.ForEach( {
-    #        Get-Content -Path $_.fullname | Select-String -Pattern '^function\b'
-    #    })
-
-    #$Functions = $Functions -split(' ')
-    #(Get-Content C:\asp4all\scripts\cExample\cExample\Public\Get-cExample.ps1 | Select-String -Pattern '^function') 
-    #split-path (Get-Content C:\asp4all\scripts\cExample\cExample\Public\Get-cExample.ps1 | Select-String -Pattern '^function')
-    #Trim the output, so strip the function word,curly braces, and whitespaces
-    
-    #$TrimmedFunctionNames = $Functions -ireplace '(function)|\s|{', ''
     $TrimmedFunctionNames = (Get-Command -Module $ModuleName).name
-
     return $TrimmedFunctionNames
-}
-
-function Get-ModuleFunctionSynopsis {
-    param(
-        [parameter(Mandatory = $true)]
-        $ModuleName
-    )
-        
-    $PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
-    $Functions = $PublicFunctions.ForEach( {
-            Get-Content -Path $_.fullname
-        })
-
-    return $Functions
 }
 
 $AllFunctions = @()
