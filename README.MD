@@ -11,7 +11,7 @@ Get-cExample
 ### Installation ###
 The installation of this module can be achieved by registering a Solvinity NuGet repository:
 
-*register-psrepository -name solget -sourcelocation "http://solget-dev.web.solvinity.com/nuget" -publishLocation "http://solget-dev.web.solvinity.com/nuget" -installationPolicy trusted*
+*register-psrepository -name solget -sourcelocation "http://solget.web.solvinity.com/nuget" -publishLocation "http://solget.web.solvinity.com/nuget" -installationPolicy trusted*
 
 *find-module -name cExample*
 
