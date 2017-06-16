@@ -1,9 +1,10 @@
 ## cExample ##
-This **cExample** module contains 1 functions that should provide assistance for automation purposes.
+This **cExample** module contains 2 functions that should provide assistance for automation purposes.
 
 ### Functions ###
 The functions this modules contains coexist of the following names:
 
+Copy-cModuleStructure
 Get-cExample
 
 
@@ -21,6 +22,64 @@ The installation of this module can be achieved by registering a Solvinity NuGet
 
 
 ### Detailed information about the functions###
+
+NAME
+    Copy-cModuleStructure
+    
+SYNOPSIS
+    Copy-cModuleStructure will copy this module to a destination module folder.
+    
+    
+SYNTAX
+    Copy-cModuleStructure [-ModuleName] <String> [-FunctionName] <String> [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Copy-cModuleStructure will copy this module to a new modulename and remove the markdown, manifest, .git relations afterwards.
+    
+
+PARAMETERS
+    -ModuleName <String>
+        Parameter help description
+        
+        Required?                    true
+        Position?                    1
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -FunctionName <String>
+        [ValidateScript({((get-verb).verb) -contains ($FunctionName.split('-')[0])})]
+        
+        Required?                    true
+        Position?                    2
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS C:\>Copy-cModuleStructure -ModuleName cExample -FunctionName get-cNewCar
+    
+    
+    
+    
+    
+    
+    
+RELATED LINKS
+
+---
 
 NAME
     Get-cExample

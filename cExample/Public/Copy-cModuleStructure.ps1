@@ -1,11 +1,11 @@
-#
+<#
 .Synopsis
    Copy-cModuleStructure will copy this module to a destination module folder.
 .DESCRIPTION
    Copy-cModuleStructure will copy this module to a new modulename and remove the markdown, manifest, .git relations afterwards.
 .EXAMPLE
    Copy-cModuleStructure -ModuleName cExample -FunctionName get-cNewCar
-#
+#>
 function Copy-cModuleStructure {
     param(
         # Parameter help description
