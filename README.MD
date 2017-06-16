@@ -1,11 +1,12 @@
 ## cExample ##
-This **cExample** module contains 2 functions that should provide assistance for automation purposes.
+This **cExample** module contains 3 functions that should provide assistance for automation purposes.
 
 ### Functions ###
 The functions this modules contains coexist of the following names:
 
 Copy-cModuleStructure
 Get-cExample
+Show-cModuleStructure
 
 
 
@@ -198,6 +199,46 @@ NOTES
     -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Get-cExample -Param1 earth -Param2 4
+    
+    
+    
+    
+    
+    
+    
+RELATED LINKS
+
+---
+
+NAME
+    Show-cModuleStructure
+    
+SYNOPSIS
+    Show-cModuleStructure will visualize and explain basic module structure.
+    
+    
+SYNTAX
+    Show-cModuleStructure [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Show-cModuleStructure will show the basic information about the directory structure chosen for easy to maintain and default module development.
+    
+
+PARAMETERS
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS C:\>Show-cModuleStructure
     
     
     
