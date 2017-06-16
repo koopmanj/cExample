@@ -26,7 +26,7 @@ NAME
     Get-cExample
     
 SYNOPSIS
-    Get-cExample will show a default module which will display a baseline for our engineers  Short description
+    Get-cExample will show a default module which will display a baseline for our engineers (Short description)
     
     
 SYNTAX
@@ -129,7 +129,7 @@ NOTES
     
     -------------------------- EXAMPLE 1 --------------------------
     
-    PS C:\>Get-cExample Example of how to use this cmdlet
+    PS C:\>Get-cExample -Param1 earth -Param2 5
     
     
     
@@ -138,7 +138,7 @@ NOTES
     
     -------------------------- EXAMPLE 2 --------------------------
     
-    PS C:\>Get-cExample -Param1 earth -Param2 5
+    PS C:\>Get-cExample -Param1 earth -Param2 4
     
     
     
@@ -155,6 +155,7 @@ RELATED LINKS
 ### Detailed folder structure###
 +---build
 +---cExample
+|   +---Private
 |   \---Public
 \---Tests
     \---unit
