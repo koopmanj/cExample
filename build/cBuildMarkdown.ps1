@@ -33,7 +33,7 @@ function Get-ModuleFunctions {
         
     $PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
     $Functions = $PublicFunctions.ForEach( {
-            Get-Content -Path $_.fullname | Select-String -Pattern 'Function '
+            Get-Content -Path $_.fullname | Select-String -Pattern '^function\b'
         })
 
     #Trim the output, so strip the function word,curly braces, and whitespaces
@@ -146,4 +146,40 @@ $ReadmeMarkDown3  | Out-File "$(Split-Path $PSScriptRoot)\README.MD" -Force -Enc
 **ComputerName**: Name of the computer being queried. Required.
 **Credential**: Credentials used to authenticate to remote machine.
 **DriveLetter**: Provide driveletter being queried @ remote machine.
+
+
+
+$ModuleName
+
+function Get-ModuleFunctions {
+    param(
+        [parameter(Mandatory = $true)]
+        $ModuleName
+    )
+        
+    $PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
+    $Functions = $PublicFunctions.ForEach( {
+            Get-Content -Path $_.fullname | Where-Object $_ -like '*function*'
+        })
+
+    #Trim the output, so strip the function word,curly braces, and whitespaces
+    $TrimmedFunctionNames = $Functions -ireplace '(function)|\s|{', ''
+
+    return $TrimmedFunctionNames
+}
+
+Get-ModuleFunctions $ModuleName
+
+$content = (Get-Content -Path $PublicFunctions.FullName)
+Get-Content -Path $PublicFunctions.FullName | Select-String -Pattern 'function' 
+$content | Select-String -Pattern 'function' -SimpleMatch
+$content | Select-String -Pattern '^function\b'
+
+ | foreach-Object {write-host $_} #| Where-Object -like '*function*' 
+$content -replace '^function$'
+
+
+Get-Content -Path $PublicFunctions.FullName | Where-Object $_ -like '*function*' 
+
+| Where-Object $_ -like '*function*'
 #>
