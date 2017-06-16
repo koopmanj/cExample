@@ -24,6 +24,7 @@ Write-Verbose -Message "$env:COMPUTERNAME : The location of the module is : $Mod
 #Import the module
 Import-Module -Name ..\$ModuleName\$ModuleManifest
 
+
 #Summarize all functions found within the ModuleFile
 function Get-ModuleFunctions {
     param(
@@ -31,13 +32,18 @@ function Get-ModuleFunctions {
         $ModuleName
     )
         
-    $PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
-    $Functions = $PublicFunctions.ForEach( {
-            Get-Content -Path $_.fullname | Select-String -Pattern '^function\b'
-        })
+    #$PublicFunctions = Get-ChildItem -Path ..\$ModuleName\Public
+    #$Functions = $PublicFunctions.ForEach( {
+    #        Get-Content -Path $_.fullname | Select-String -Pattern '^function\b'
+    #    })
 
+    #$Functions = $Functions -split(' ')
+    #(Get-Content C:\asp4all\scripts\cExample\cExample\Public\Get-cExample.ps1 | Select-String -Pattern '^function') 
+    #split-path (Get-Content C:\asp4all\scripts\cExample\cExample\Public\Get-cExample.ps1 | Select-String -Pattern '^function')
     #Trim the output, so strip the function word,curly braces, and whitespaces
-    $TrimmedFunctionNames = $Functions -ireplace '(function)|\s|{', ''
+    
+    #$TrimmedFunctionNames = $Functions -ireplace '(function)|\s|{', ''
+    $TrimmedFunctionNames = (Get-Command -Module $ModuleName).name
 
     return $TrimmedFunctionNames
 }
