@@ -56,15 +56,15 @@ function Copy-cModuleStructure {
     Set-Location $ModuleName
     try {
         if(Test-Path .\.git){
-            Remove-Item -Path .git -Recurse -Force 
+            Remove-Item -Path .git -Recurse -Force -Confirm:$true
             Write-Verbose -Message "$env:COMPUTERNAME : Erasing all .git history of the copied project : $CurrentModuleName to $ModuleName" -Verbose   
         }
         if(Test-Path .\README.MD) {
-            Remove-Item -Path .\README.MD -Force 
+            Remove-Item -Path .\README.MD -Force -Confirm:$true
             Write-Verbose -Message "$env:COMPUTERNAME : Erasing previous readme file of the copied project : .\README.MD" -Verbose   
         }
         if(Get-ChildItem -Filter *.psd1 -Recurse) {
-            Get-ChildItem -Filter *.psd1 -Recurse | Remove-Item -Force
+            Get-ChildItem -Filter *.psd1 -Recurse | Remove-Item -Force -Confirm:$true
             Write-Verbose -Message "$env:COMPUTERNAME : Erasing previous manifest file of the copied project : *.psd1" -Verbose   
         }
     }
