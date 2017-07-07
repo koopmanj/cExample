@@ -1,12 +1,12 @@
 ﻿<#
 .Synopsis
-   Get-cExample will show a default module which will display a baseline for our engineers  Short description
+   Get-cExample will show a default module which will display a baseline for our engineers (Short description)
 .DESCRIPTION
    Get-cExample will help our engineers to just copy a default module and modify the code to their needs Long description
 .EXAMPLE
-   Get-cExample Example of how to use this cmdlet
-.EXAMPLE
    Get-cExample -Param1 earth -Param2 5
+.EXAMPLE
+   Get-cExample -Param1 earth -Param2 4
 .INPUTS
    Inputs to this cmdlet (if any)
 .OUTPUTS
@@ -20,7 +20,7 @@
 .FUNCTIONALITY
    The functionality that best describes this cmdlet
 #>
-function Get-cExample                                         #For a valid verb(get/set/..) check get-verb pick one that match the purpose of your function, for the Noun start with a 'c' so we will never end up with conflicting functions which deliver slightly different expectations, and keep it singular.
+function Get-cExample                                         #For a valid verb(get/set/..) check get-verb pick one that match the purpose of your function, for the Noun start with a 'c' so we will never end up with conflicting functions which deliver slightly different expectations, and keep it singular. 
 {
     [CmdletBinding(DefaultParameterSetName='Parameter Set 1', #Parametersets will be usefull if your function will require different input depending on the parameter used.
                   SupportsShouldProcess=$true,                #This call is used to request confirmation from the user before the operation is performed. This property is introduced in Windows PowerShell 2.0.
@@ -64,21 +64,17 @@ function Get-cExample                                         #For a valid verb(
         $Param3                                              ##The actual parametervalue.
     )
 
-    Begin
-    {
+    Begin {
         Write-Verbose -Message  "$env:COMPUTERNAME : $(Get-Date) : Congratulations $((whoami).split('\')[1]) you just called the Example function of our company" -Verbose
         Write-Verbose -Message  "$env:COMPUTERNAME : $(Get-Date) : $((whoami).split('\')[1]) This block is used to provide optional one-time pre-processing for the function.`n
                                                      The PowerShell runtime uses the code in this block one time for each instance of the function in the pipeline. " -Verbose
     }
-    Process
-    {
-        if ($pscmdlet.ShouldProcess("Target", "Operation"))
-        {
+    Process {
+        if ($pscmdlet.ShouldProcess("Target", "Operation")) {
             #
         }
     }
-    End
-    {
+    End {
         Write-Verbose -Message  "$env:COMPUTERNAME : $(Get-Date) : $((whoami).split('\')[1]) This block is used to provide optional one-time post-processing for the function." -Verbose
     }
 }
