@@ -9,5 +9,7 @@ git commit -am 'New version'
 $remote = git remote
 Write-Verbose -Message "$env:COMPUTERNAME : git remote : $remote" -Verbose
 
-Write-Verbose -Message "$env:COMPUTERNAME : git push $remote master" -Verbose
-git push $remote master
+$remote.ForEach({
+    Write-Verbose -Message "$env:COMPUTERNAME : git push $remote master" -Verbose
+    git push $_ master
+})
