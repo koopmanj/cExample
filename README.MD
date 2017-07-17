@@ -36,7 +36,8 @@ SYNTAX
     
     
 DESCRIPTION
-    Copy-cModuleStructure will copy this module to a new modulename and remove the markdown, manifest, .git relations afterwards.
+    Copy-cModuleStructure will copy this module to a new modulename and remove the markdown, manifest, .git relations 
+    afterwards.
     
 
 PARAMETERS
@@ -96,23 +97,30 @@ SYNTAX
     
     
 DESCRIPTION
-    Get-cExample will help our engineers to just copy a default module and modify the code to their needs Long description
+    Get-cExample will help our engineers to just copy a default module and modify the code to their needs Long 
+    description
     
 
 PARAMETERS
     -Param1 <Object>
         Param1 help description
         This parameter -p1 (alias) or -param1 will require a value.
-        Gets and sets a Boolean value that indicates whether the parameter can take values from incoming pipeline objects.
-        Gets and sets a Boolean value that indicates that the parameter can take values from a property of the incoming pipeline object that has the same name as this parameter. For example, 
-        if the name of the cmdlet or function parameter is userName, the parameter can take values from the userName property of incoming objects.
-        Gets and sets a Boolean value that indicates whether the cmdlet parameter accepts all the remaining command-line arguments that are associated with this parameter.
-        The position of the parameter, so -p1 or -param1 should be provided as the first parameter by invoking this function.
-        Gets or sets the parameter set that is used when Windows PowerShell cannot determine the parameter set to use based on the specified parameters.     
+        Gets and sets a Boolean value that indicates whether the parameter can take values from incoming pipeline 
+        objects.
+        Gets and sets a Boolean value that indicates that the parameter can take values from a property of the 
+        incoming pipeline object that has the same name as this parameter. For example, if the name of the cmdlet or 
+        function parameter is userName, the parameter can take values from the userName property of incoming objects.
+        Gets and sets a Boolean value that indicates whether the cmdlet parameter accepts all the remaining 
+        command-line arguments that are associated with this parameter.
+        The position of the parameter, so -p1 or -param1 should be provided as the first parameter by invoking this 
+        function.
+        Gets or sets the parameter set that is used when Windows PowerShell cannot determine the parameter set to use 
+        based on the specified parameters.     
         Provide a ?! or help to retrieve the displaymessage displayed on the left.
         This validator checks that the value is not null.
         This validator checks that the value is not null or empty.
-        The ValidateCount attribute specifies the minimum and maximum number of arguments allowed for a cmdlet parameter.
+        The ValidateCount attribute specifies the minimum and maximum number of arguments allowed for a cmdlet 
+        parameter.
         The ValidateSetAttribute attribute specifies a set of possible values for a cmdlet parameter argument.
         The alias of the param.
         
@@ -129,7 +137,8 @@ PARAMETERS
         This validator allows an emty collection.
         This validator allows an empty string.
         This will cast a script to determine if the inputparameter can be passed.
-        The ValidateRange attribute specifies the minimum and maximum values (the range) for the cmdlet parameter argument.
+        The ValidateRange attribute specifies the minimum and maximum values (the range) for the cmdlet parameter 
+        argument.
         The input of -param2 should be an integer(number)
         
         Required?                    false
@@ -142,7 +151,8 @@ PARAMETERS
         Param3 help description
         param set mentioned previously, scroll up.
         param regex validation pattern.
-        The ValidateLength attribute specifies the minimum and maximum number of characters for a cmdlet parameter argument.
+        The ValidateLength attribute specifies the minimum and maximum number of characters for a cmdlet parameter 
+        argument.
         The input of -param2 should be an string 'textline'.
         The actual parametervalue.
         
@@ -222,7 +232,8 @@ SYNTAX
     
     
 DESCRIPTION
-    Show-cModuleStructure will show the basic information about the directory structure chosen for easy to maintain and default module development.
+    Show-cModuleStructure will show the basic information about the directory structure chosen for easy to maintain 
+    and default module development.
     
 
 PARAMETERS
