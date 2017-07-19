@@ -1,5 +1,5 @@
 ## cExample ##
-This **cExample** module contains 4 functions that should provide assistance for automation purposes.
+This **cExample** module contains 3 functions that should provide assistance for automation purposes.
 
 ### Functions ###
 The functions this modules contains coexist of the following names:
@@ -7,7 +7,6 @@ The functions this modules contains coexist of the following names:
 Copy-cModuleStructure
 Get-cExample
 Show-cModuleStructure
-Verb-cNoun
 
 
 
@@ -251,109 +250,6 @@ OUTPUTS
     -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Show-cModuleStructure
-    
-    
-    
-    
-    
-    
-    
-RELATED LINKS
-
----
-
-NAME
-    Verb-cNoun
-    
-SYNOPSIS
-    Short description
-    
-    
-SYNTAX
-    Verb-cNoun [-Param1] <Object> [-Param2 <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
-    
-    Verb-cNoun [-Param3 <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-    
-    
-DESCRIPTION
-    Long description
-    
-
-PARAMETERS
-    -Param1 <Object>
-        Param1 help description
-        
-        Required?                    true
-        Position?                    1
-        Default value                
-        Accept pipeline input?       true (ByValue, ByPropertyName)
-        Accept wildcard characters?  false
-        
-    -Param2 <Int32>
-        Param2 help description
-        
-        Required?                    false
-        Position?                    named
-        Default value                0
-        Accept pipeline input?       false
-        Accept wildcard characters?  false
-        
-    -Param3 <String>
-        Param3 help description
-        
-        Required?                    false
-        Position?                    named
-        Default value                
-        Accept pipeline input?       false
-        Accept wildcard characters?  false
-        
-    -WhatIf [<SwitchParameter>]
-        
-        Required?                    false
-        Position?                    named
-        Default value                
-        Accept pipeline input?       false
-        Accept wildcard characters?  false
-        
-    -Confirm [<SwitchParameter>]
-        
-        Required?                    false
-        Position?                    named
-        Default value                
-        Accept pipeline input?       false
-        Accept wildcard characters?  false
-        
-    <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
-        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
-    
-INPUTS
-    Inputs to this cmdlet (if any)
-    
-    
-OUTPUTS
-    Output from this cmdlet (if any)
-    
-    
-NOTES
-    
-    
-        General notes
-    
-    -------------------------- EXAMPLE 1 --------------------------
-    
-    PS C:\>Example of how to use this cmdlet
-    
-    
-    
-    
-    
-    
-    -------------------------- EXAMPLE 2 --------------------------
-    
-    PS C:\>Another example of how to use this cmdlet
     
     
     
