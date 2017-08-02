@@ -89,11 +89,11 @@ $AllFunctions
 
 
 ### Installation ###
-The installation of this module can be achieved by registering a Solvinity NuGet repository:`n
-*register-psrepository -name solget -sourcelocation "http://solget.web.solvinity.com/nuget" -publishLocation "http://solget.web.solvinity.com/nuget" -installationPolicy trusted*`n
+The installation of this module can be achieved by registering a NuGet repository:`n
+*register-psrepository -name reponame -sourcelocation "http://repourl/nuget" -publishLocation "http://repourl/nuget" -installationPolicy trusted*`n
 *find-module -name $ModuleName*`n
 *-or*`n
-*find-module -name $ModuleName -repository solget*`n
+*find-module -name $ModuleName -repository reponame*`n
 
 ### Detailed information about the functions###
 "@
@@ -104,7 +104,7 @@ $ReadmeMarkDown2 = @"
 
 $ReadmeMarkDown3 = @"
 ### Contributing ###
-*Solvinity Customer Engineering*
+*Koopman & Co Engineering*
 
 ### Links ###
 **[Git $ModuleName Repo]($GitRemote)**

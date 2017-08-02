@@ -11,15 +11,15 @@ Show-cModuleStructure
 
 
 ### Installation ###
-The installation of this module can be achieved by registering a Solvinity NuGet repository:
+The installation of this module can be achieved by registering a NuGet repository:
 
-*register-psrepository -name solget -sourcelocation "http://solget.web.solvinity.com/nuget" -publishLocation "http://solget.web.solvinity.com/nuget" -installationPolicy trusted*
+*register-psrepository -name reponame -sourcelocation "http://repourl/nuget" -publishLocation "http://repourl/nuget" -installationPolicy trusted*
 
 *find-module -name cExample*
 
 *-or*
 
-*find-module -name cExample -repository solget*
+*find-module -name cExample -repository reponame*
 
 
 ### Detailed information about the functions###
@@ -274,7 +274,7 @@ RELATED LINKS
 
 
 ### Contributing ###
-*Solvinity Customer Engineering*
+*Koopman & Co Engineering*
 
 ### Links ###
-**[Git cExample Repo]()**
+**[Git cExample Repo](git@github.com:koopmanj/cGeneral.git)**
