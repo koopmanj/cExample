@@ -10,6 +10,7 @@ Show-cModuleStructure
 
 
 
+
 ### Installation ###
 The installation of this module can be achieved by registering a NuGet repository:
 
@@ -348,6 +349,7 @@ RELATED LINKS
 |   |   +---65
 |   |   +---68
 |   |   +---69
+|   |   +---6d
 |   |   +---70
 |   |   +---71
 |   |   +---74
@@ -358,6 +360,7 @@ RELATED LINKS
 |   |   +---7b
 |   |   +---7d
 |   |   +---7e
+|   |   +---81
 |   |   +---82
 |   |   +---83
 |   |   +---85
@@ -397,6 +400,7 @@ RELATED LINKS
 |   |   +---b2
 |   |   +---b3
 |   |   +---b4
+|   |   +---b5
 |   |   +---b6
 |   |   +---b9
 |   |   +---bb

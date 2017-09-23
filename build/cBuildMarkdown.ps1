@@ -85,7 +85,7 @@ This **$ModuleName** module contains $($PublicFunctions.Count) functions that sh
 
 ### Functions ###
 The functions this modules contains coexist of the following names:`n
-$AllFunctions
+$($AllFunctions|out-string)
 
 
 ### Installation ###
